@@ -64,7 +64,6 @@ class MatrizController extends Controller
 			]);
 
 		}
-    	//return $result;
     }
 
     public function inicializa(){
@@ -126,18 +125,5 @@ class MatrizController extends Controller
 		return $this->sum;
 	}
 
-/*	public function store(Request $request){
-
-print_r($request->all());
-exit;
-		if($request->ajax()){
-			return response()->json([
-				'mensaje'=> $request->all()
-
-			]);
-
-		}
-	}*/
-		
 
 }

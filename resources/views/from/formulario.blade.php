@@ -2,7 +2,6 @@
 
 @section('content')
 {!! Form::open(array('id' => 'miform')) !!} 
-<!--<form role="form" route="matriz.store" method="POST">-->
 <br><br>
 <div class="form-group">
 	{!!Form::label('Selecione uno opción para empezar')!!}
@@ -35,12 +34,9 @@
   </div>
  </div> 
 <input type="hidden" name="_token" value="{{ csrf_token() }}" id="token">
-<!--<input id="boton" type="button" class ='btn btn-default' name="boton" value="Calcular"/>-->
 {!!link_to('#', $title = 'Calcular', $attributes = ['id' => 'boton', 'class' =>'btn btn-default'], $secure =null)!!}
- <!-- <button type="submit" class="btn btn-default">Enviar</button> -->
 
 {!! Form::close() !!} 
-<!--</form>-->
 <div id="respuesta">
 
 </div>
