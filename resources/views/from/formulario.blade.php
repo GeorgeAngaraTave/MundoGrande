@@ -19,6 +19,17 @@
  	{!!Form::text('set4', null,['id' => 'set4', 'placeholder' => 'w', 'style' => 'width: 130px'])!!}
   </div>
 
+  <div class="form-group">
+ {!!Form::label('Query:')!!}
+ <br>
+ 	{!!Form::text('query1', null,['id' => 'query1', 'placeholder' => 'x1', 'style' => 'width: 130px'])!!}
+ 	{!!Form::text('query2', null,['id' => 'query2', 'placeholder' => 'y1', 'style' => 'width: 130px'])!!}
+ 	{!!Form::text('query3', null,['id' => 'query3', 'placeholder' => 'z1', 'style' => 'width: 130px'])!!}
+ 	{!!Form::text('query4', null,['id' => 'query4', 'placeholder' => 'x1', 'style' => 'width: 130px'])!!}
+ 	{!!Form::text('query5', null,['id' => 'query5', 'placeholder' => 'y2', 'style' => 'width: 130px'])!!}
+ 	{!!Form::text('query6', null,['id' => 'query6', 'placeholder' => 'z2', 'style' => 'width: 130px'])!!}
+  </div>
+
  {!!Form::submit('Calcular',['class' => 'btn btn-default'])!!}
  <!-- <button type="submit" class="btn btn-default">Enviar</button> -->
 
