@@ -14,6 +14,7 @@ $( document ).ready(
 			$('#setdiv').show();
 			$('#querydiv').hide();
 			$('#boton').show();
+			$('#respuesta').html('');
 		
 		}
 
@@ -23,6 +24,7 @@ $( document ).ready(
 			$('#querydiv').show();
 			$('#setdiv').show();
 			$('#boton').show();
+			$('#respuesta').html('');
 
 
 		}
@@ -33,6 +35,7 @@ $( document ).ready(
 			$('#querydiv').hide();
 			$('#setdiv').hide();
 			$('#boton').hide();
+			$('#respuesta').html('');
 		}
 
 
