@@ -18,12 +18,13 @@ class MatrizController extends Controller
     } 
 
     public function create(){
-
+    ;
     	return view('from.formulario');
     }
 
     public function store(Request $request){
-       
+
+
         $this->inicializa();
 		if($request['selectop'] == "Set"){
 
@@ -34,7 +35,9 @@ class MatrizController extends Controller
 
     	if($request["selectop"]=="Query")
 		{
+
 			if($request["set1"] != ''){
+
 				$this->setUpdate($request["set1"],$request["set2"],$request["set3"],$request["set4"]);	
 			}
 
@@ -54,7 +57,14 @@ class MatrizController extends Controller
 			
 		}	
 
-    	return $result;
+		if($request->ajax()){
+			return response()->json([
+				'mensaje'=> $result
+
+			]);
+
+		}
+    	//return $result;
     }
 
     public function inicializa(){
@@ -115,6 +125,19 @@ class MatrizController extends Controller
 
 		return $this->sum;
 	}
+
+/*	public function store(Request $request){
+
+print_r($request->all());
+exit;
+		if($request->ajax()){
+			return response()->json([
+				'mensaje'=> $request->all()
+
+			]);
+
+		}
+	}*/
 		
 
 }

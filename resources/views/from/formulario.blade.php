@@ -1,15 +1,18 @@
 @extends('layouts.principalfrom')
 
 @section('content')
-{!! Form::open(array('route' => 'cubo.store','method' => 'POST')) !!}
+{!! Form::open(array('id' => 'miform')) !!} 
 <!--<form role="form" route="matriz.store" method="POST">-->
+<br><br>
 <div class="form-group">
+	{!!Form::label('Selecione uno opción para empezar')!!}
 	{!!Form::select('selectop', 
 					array('' => 'Seleccione', 'Set' => 'Set/update', 'Query' => 'Query'),
 					null, 
 					['class' => 'form-control', 'style'  =>'width: 130px', 'id' => 'dropdown']
 					)!!}
 </div>
+<div id="setdiv">
   <div class="form-group">
  {!!Form::label('Set/update:')!!}
  <br>
@@ -18,7 +21,8 @@
  	{!!Form::text('set3', null,['id' => 'set3', 'placeholder' => 'z', 'style' => 'width: 130px'])!!}
  	{!!Form::text('set4', null,['id' => 'set4', 'placeholder' => 'w', 'style' => 'width: 130px'])!!}
   </div>
-
+ </div> 
+<div id="querydiv">
   <div class="form-group">
  {!!Form::label('Query:')!!}
  <br>
@@ -29,13 +33,17 @@
  	{!!Form::text('query5', null,['id' => 'query5', 'placeholder' => 'y2', 'style' => 'width: 130px'])!!}
  	{!!Form::text('query6', null,['id' => 'query6', 'placeholder' => 'z2', 'style' => 'width: 130px'])!!}
   </div>
-
- {!!Form::submit('Calcular',['class' => 'btn btn-default'])!!}
+ </div> 
+<input type="hidden" name="_token" value="{{ csrf_token() }}" id="token">
+<!--<input id="boton" type="button" class ='btn btn-default' name="boton" value="Calcular"/>-->
+{!!link_to('#', $title = 'Calcular', $attributes = ['id' => 'boton', 'class' =>'btn btn-default'], $secure =null)!!}
  <!-- <button type="submit" class="btn btn-default">Enviar</button> -->
 
 {!! Form::close() !!} 
 <!--</form>-->
+<div id="respuesta">
 
+</div>
 
 
 @stop
