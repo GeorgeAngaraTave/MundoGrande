@@ -12,7 +12,7 @@
 */
 
 //Route::get('/', 'MatrizContrller@index');
-Route::resource('cubo', 'MatrizController');
-Route::get('/', function () {
+Route::resource('/', 'MatrizController');
+/*Route::get('/', function () {
     return view('welcome');
-});
+});*/
